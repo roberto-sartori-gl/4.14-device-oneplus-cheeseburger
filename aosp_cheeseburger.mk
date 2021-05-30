@@ -18,11 +18,15 @@ PRODUCT_DEVICE_DS := true
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9,1
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/poplar/aosp_g8341.mk)
+TARGET_KERNEL_CONFIG := aosp_yoshino_poplar_defconfig
 
-PRODUCT_NAME := aosp_g8342
-PRODUCT_DEVICE := poplar
-PRODUCT_MODEL := Xperia XZ1 Dual (AOSP)
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/oneplus/cheeseburger/device.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_NAME := aosp_cheeseburger
+PRODUCT_DEVICE := cheeseburger
+PRODUCT_MODEL := OnePlus 5 (AOSP)
+PRODUCT_BRAND := OnePlus
+PRODUCT_MANUFACTURER := OnePlus

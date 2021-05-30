@@ -13,10 +13,10 @@
 # limitations under the License.
 
 # Device path
-DEVICE_PATH := device/sony/poplar/rootdir
+DEVICE_PATH := device/oneplus/cheeseburger/rootdir
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/poplar/overlay
+    device/oneplus/cheeseburger/overlay
 
 # Device Specific Permissions
 PRODUCT_COPY_FILES := \
@@ -65,9 +65,9 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.poplar \
-    init.recovery.poplar \
-    init.poplar
+    fstab.cheeseburger \
+    init.recovery.cheeseburger \
+    init.cheeseburger
 
 # Telephony Packages (AOSP)
 PRODUCT_PACKAGES += \
@@ -95,7 +95,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/vendor
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/yoshino/platform.mk)
+$(call inherit-product, device/oneplus/msm8998-platform/platform.mk)
 
 # copy NFC firmware
 $(call inherit-product-if-exists, vendor/nxp/nxp-vendor.mk)
