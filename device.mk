@@ -108,3 +108,5 @@ LOCAL_KERNEL := device/oneplus/cheeseburger/kernel
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+$(call inherit-product, vendor/oneplus/msm8998-common/msm8998.mk)
