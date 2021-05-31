@@ -103,3 +103,8 @@ $(call inherit-product-if-exists, vendor/nxp/nxp-vendor.mk)
 
 # include board vendor blobs
 $(call inherit-product-if-exists, vendor/sony/yoshino-common/yoshino-partial.mk)
+
+LOCAL_KERNEL := device/oneplus/cheeseburger/kernel
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
