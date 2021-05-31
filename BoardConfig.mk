@@ -17,9 +17,9 @@ include device/oneplus/msm8998-platform/PlatformConfig.mk
 TARGET_BOOTLOADER_BOARD_NAME := cheeseburger
 
 # Platform
-PRODUCT_PLATFORM := yoshino
+PRODUCT_PLATFORM := msm8998
 
-BOARD_KERNEL_CMDLINE += androidboot.hardware=poplar
+BOARD_KERNEL_CMDLINE += androidboot.hardware=cheeseburger
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)

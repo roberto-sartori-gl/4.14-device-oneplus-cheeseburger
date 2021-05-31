@@ -66,7 +66,8 @@ PRODUCT_COPY_FILES += \
 # Device Init
 PRODUCT_PACKAGES += \
     fstab.cheeseburger \
-    init.recovery.cheeseburger \
+    init.recovery.qcom \
+    init.qcom \
     init.cheeseburger
 
 # Telephony Packages (AOSP)
